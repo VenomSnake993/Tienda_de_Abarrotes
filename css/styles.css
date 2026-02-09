@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    /* border: solid 1px #d31e69; */
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Geist Mono", monospace;
+    font-optical-sizing: auto;
+    background: #ffebd3;
+}
+
+.barra-navegacion {
+    background-color: #ff5c43;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    position: sticky;
+    top: 0px;
+    transition: background-color 0.5s linear;
+}
+
+.barra-navegacion a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 1s ease-in;
+    transition: transform 0.25s ease;
+}
+
+.barra-navegacion a:hover {
+    transform: scale(1.05);
+}
+
+.activar-color-barra-navegacion {
+    background-color: #084386;
+}
+
+.nombre-tienda {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.contenedor {
+    /* background-image: linear-gradient(to bottom right, orange, white); */
+    max-width: 100%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.contenedor-texto {
+    max-width: 100%;
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+.contenedor-texto:first-child p {
+    margin-top: 0px;
+    padding: 10px;
+}
+
+.contenedor-imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+
+}
+.contenedor-imagen > img {
+    width: min(100%, 500px);
+
+}
+/* Seccion Promociones */
+
+.seccion-promociones {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.promociones {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+
+.promociones > img {
+    background-color: #cb2b4f;
+    margin: 10px 10px;
+    width: calc(100%/4);
+    height: 450px;
+}
+
+.promociones img:first-child {
+    margin-left: 0px;
+}
+
+/* Seccion Contacto */
+.seccion-contacto-direccion {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #084386;
+}
+.seccion-contacto-direccion div {
+    display: flex;
+    gap: 10px;
+}
+
+.titulo-seccion {
+    font-size: 1.3em;
+    color: white;
+}
+.form-contacto {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+frame {
+    width: 50%;
+}
+
+label, input[type="submit"] {
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+
+input[type="text"], input[type="email"], textarea {
+    height: 50px;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    border: 2px solid #084386;
+    border-radius: 5px;
+    text-align: justify;
+    font-size: 1rem;
+    font-family: "Geist Mono", monospace;
+}
+
+input[type="submit"] {
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 0px;
+    border-radius: 5px;
+    background: #cb2b4f;
+    transition: transform 0.5s ease;
+}
+
+input[type="submit"]:hover {
+    transform: scale(0.95);
+    background-color: #b32947;
+    cursor: pointer;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+    /* field-sizing: content; */
+}
+
+address {
+    display: inline;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Tableta */
+@media (min-width: 481px) and (max-width: 1024px) {
+
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+}
+/* Telefono */
+@media (max-width: 767px) {
+
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+    .barra-navegacion {
+        font-size: 0.9rem;
+    }
+
+    .contenedor-texto {
+        font-size: 1.2rem;
+    }
+
+    .seccion-contacto-direccion {
+        flex-direction: column;
+    }
+    .form-contacto{
+        width: 100%;
+    }
+}
