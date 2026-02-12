@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="resources/images/logo.png" type="image/x-icon">
-    <script src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
 </head>
 
 <body>
@@ -18,9 +18,9 @@
         <a href="index.html"><img src="resources/images/logoB.png" alt="Logo" width="50px" height="50px" id="Logo"></a>
         <div>
             <a href="">Productos</a>
-            <a href="">Promociones</a>
+            <a href="#Promociones">Promociones</a>
             <a href="">Nosotros</a>
-            <a href="">Contacto</a>
+            <a href="#Contacto">Contacto</a>
         </div>
     </nav>
     <main class="contenedor">
@@ -36,18 +36,20 @@
             <img src="resources/images/imagenPrincipal.png" alt="Tienda">
         </div>
     </main>
-    <article class="seccion-promociones">
+    <article class="seccion-promociones" id="Promociones">
         <header class="titulo-seccion"><h2>Promociones en productos</h2></header>
         <div class="promociones">
             <img src="resources/Imagenes promociones/products_emoji_movil.webp" alt="Vuala emojis">
+            <img src="resources/Imagenes promociones/promocion-Bimbo.webp" alt="Bimbo CN">
+            <img src="resources/Imagenes promociones/Promocion_Cigarros.png" alt="Promocion cigarros 3 x 10 pesos">
             <img src="resources/Imagenes promociones/products_emoji_movil.webp" alt="Vuala emojis">
             <img src="resources/Imagenes promociones/products_emoji_movil.webp" alt="Vuala emojis">
-            <img src="resources/Imagenes promociones/products_emoji_movil.webp" alt="Vuala emojis">
+
         </div>
     </article>
-    <article class="seccion-contacto-direccion">
+    <article class="seccion-contacto-direccion" id="Contacto">
         <header class="titulo-seccion"><h2>Dirección y Contacto</h2></header>
-        <div>
+        <div class="contacto-direccion">
             <form action="" class="form-contacto">
                 <label for="nombre-persona">Nombre</label>
                 <input type="text" name="nombre-persona" placeholder="Escriba su nombre...">
