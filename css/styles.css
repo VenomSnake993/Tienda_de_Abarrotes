@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 * {
     box-sizing: border-box;
     /* border: solid 1px #d31e69; */
@@ -31,7 +32,7 @@ body {
     display: inline-block;
     color: white;
     text-align: center;
-    margin: 10px;
+    margin: 5px;
     font-weight: bold;
     text-decoration: none;
     transition: color 1s ease-in;
@@ -82,57 +83,59 @@ body {
 .contenedor-imagen > img {
     width: min(100%, 500px);
 }
+
 /* Seccion Promociones */
 
 .seccion-promociones {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    margin: 10px 0px 10px 0px;
+    margin-top: 20px;
     background-color: #084386;
-    max-width: 100dvw;
+    max-width: 100%;
+}
 
+.grupo-promociones {
+    display: flex;
+    overflow: hidden;
 }
 
 .promociones {
     display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    max-width: 100%;
-    min-height: max-content;
+    flex: 0 0 100%;
+    padding-right: 10px;
     gap: 10px;
+    animation: carrusel 10s linear infinite;
 }
 
-.promociones > img {
-    background-color: #fbbb90;
-    width: 100%;
-    max-width: 500px;
+@keyframes carrusel {
+    from {transform: translateX(0%);}
+    to {transform: translateX(-100%);}
+}
+
+.grupo-promociones:hover .promociones {
+    animation-play-state: paused;
+}
+
+.promociones img {
+    width: calc(100%/4);
+    background-color: #ffeeda;
     height: 400px;
-    border-radius: 10px;
-    transition: transform 0.5s ease;
-    cursor: pointer;
+    border-radius: 24px;
+    transition: transform 0.5s;
 }
-
-.promociones > img:hover {
-    transform: scale(1.05);
-}
-
-/* .promociones img:first-child {
-    margin-left: 0px;
-}
-
-.promociones img:last-child {
-    margin-right: 0px;
-} */
 
 /* Seccion Contacto */
+
 .seccion-contacto-direccion {
     max-width: 100%;
     display: flex;
     flex-direction: column;
     padding: 10px;
+    margin-top: 20px;
     background-color: #084386;
 }
+
 .contacto-direccion {
     display: flex;
     flex-direction: row;
@@ -143,6 +146,7 @@ body {
     font-size: 1.3em;
     color: white;
 }
+
 .form-contacto {
     width: 50%;
     display: flex;
@@ -177,13 +181,12 @@ input[type="submit"] {
     font-size: 1rem;
     border: 0px;
     border-radius: 5px;
-    background: #cb2b4f;
+    background: linear-gradient(to left,#de224b, #ff631b);
     transition: transform 0.5s ease;
 }
 
 input[type="submit"]:hover {
-    transform: scale(0.95);
-    background-color: #b32947;
+    transform: scale(0.98);
     cursor: pointer;
 }
 
@@ -213,6 +216,9 @@ footer a {
     .contenedor {
         grid-template-columns: 1fr;
     }
+    .promociones img {
+        width: auto;
+    }
 }
 /* Telefono */
 @media (max-width: 767px) {
@@ -220,8 +226,10 @@ footer a {
     .contenedor {
         grid-template-columns: 1fr;
     }
+
     .barra-navegacion {
-        font-size: 0.9rem;
+        font-size: small;
+        justify-content: center;
     }
 
     .contenedor-texto {
@@ -237,7 +245,13 @@ footer a {
         max-width: 100%;
         min-height: 400px;
     }
+
     .form-contacto{
         width: 100%;
     }
+
+    .promociones img {
+        width: auto;
+    }
+
 }
