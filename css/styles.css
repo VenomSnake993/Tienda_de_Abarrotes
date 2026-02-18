@@ -122,9 +122,13 @@ body {
     background-color: #ffeeda;
     height: 400px;
     border-radius: 24px;
+    transform: scale(0.9);
     transition: transform 0.5s;
 }
 
+.promociones img:hover {
+    transform: scale(1);
+}
 /* Seccion Contacto */
 
 .seccion-contacto-direccion {
@@ -145,6 +149,7 @@ body {
 .titulo-seccion {
     font-size: 1.3em;
     color: white;
+    text-align: center;
 }
 
 .form-contacto {
@@ -153,11 +158,16 @@ body {
     flex-direction: column;
 }
 
+
 iframe {
     width: 50%;
 }
 
-label, input[type="submit"] {
+span {
+    color: #de224b;
+}
+
+label, button[type="submit"], .form-contacto p  {
     color: white;
     font-weight: bold;
     font-style: italic;
@@ -172,9 +182,22 @@ input[type="text"], input[type="email"], textarea {
     text-align: justify;
     font-size: 1rem;
     font-family: "Geist Mono", monospace;
+    transition: border-color 0.5s ease-in;
 }
 
-input[type="submit"] {
+input[type="text"]:invalid:focus, input[type="email"]:invalid:focus, textarea:invalid:focus {
+    outline: none;
+    border: solid 3px;
+    border-color: #de224b;
+}
+
+input[type="text"]:valid, input[type="email"]:valid, textarea:valid {
+    outline: none;
+    border: solid 3px;
+    border-color: #00c853;
+}
+
+button[type="submit"] {
     margin: 10px 0px 10px 0px;
     width: 100%;
     padding: 10px;
@@ -182,10 +205,10 @@ input[type="submit"] {
     border: 0px;
     border-radius: 5px;
     background: linear-gradient(to left,#de224b, #ff631b);
-    transition: transform 0.5s ease;
+    transition: transform 0.5s;
 }
 
-input[type="submit"]:hover {
+button[type="submit"]:hover {
     transform: scale(0.98);
     cursor: pointer;
 }

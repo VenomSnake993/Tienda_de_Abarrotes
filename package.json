@@ -1,0 +1,9 @@
+{
+  "name": "abarrotes_patch",
+  "version": "1.0.0", 
+  "description": "Pagina web para una tienda de abarrotes",
+  "type": "module",
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1"
+  }
+}

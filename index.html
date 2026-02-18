@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="resources/images/logo.png" type="image/x-icon">
-    <script defer src="js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    <script defer type = "module" src="js/script.js"></script>
 </head>
 
 <body>
@@ -56,14 +58,22 @@
     <article class="seccion-contacto-direccion" id="Contacto">
         <header class="titulo-seccion"><h2>Dirección y Contacto</h2></header>
         <div class="contacto-direccion">
-            <form action="" class="form-contacto">
-                <label for="nombre-persona">Nombre</label>
-                <input type="text" name="nombre-persona" placeholder="Escriba su nombre...">
-                <label for="correo">Email</label>
-                <input type="email" name="correo" placeholder="Escriba su correo electrónico...">
-                <label for="contexto">Quejas y sugerencias</label>
-                <textarea name="contexto" placeholder="¿En que podemos mejorar?"></textarea>
-                <input type="submit" value="Enviar">
+            <form class="form-contacto" id="formulario-contacto">
+
+                <label for="nombre-persona">Nombre <span>*</span></label>
+                <input type="text" name="nombreCompleto" required placeholder="Escriba su nombre...">
+
+                <label for="correo">Email <span>*</span></label>
+                <input type="email" name="correo" required placeholder="Escriba su correo electrónico...">
+
+                <label for="asunto">Asunto <span>*</span></label>
+                <input type="text" name="asunto" required placeholder="Escriba el asunto del correo...">
+
+                <label for="mensaje">Quejas y sugerencias <span>*</span></label>
+                <textarea name="mensaje" required placeholder="¿En que podemos mejorar?"></textarea>
+
+                <button type="submit">Enviar</button>
+                <p>Elementos requeridos <span>*</span></p>
             </form>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15023.467133459251!2d-99.130455!3d19.718295!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d18bc522dfa0fd%3A0x200a56e6cde463f7!2sAbarrotes%20%22PATCH%22!5e0!3m2!1ses-419!2smx!4v1770490373347!5m2!1ses-419!2smx"
