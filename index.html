@@ -10,8 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="resources/images/logo.png" type="image/x-icon">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script defer type = "module" src="js/script.js"></script>
 </head>
 
@@ -25,6 +24,20 @@
             <a href="#Contacto">Contacto</a>
         </div>
     </nav>
+    <div class="menu-telefono">
+        <a href="index.html"><img src="resources/images/logo.png" alt="Logo" width="50px" height="50px" id="Logo-aside"></a>
+
+        <button class="btn-menu-lateral"><img src="resources/images/menuTelefono.png" alt="Logo-menu" width="50px" height="50px" id="Logo-menu"></button>
+    </div>
+    <aside class="barra-navegacion-aside">
+        <a href="index.html" style="opacity: 0;"><img src="resources/images/logoB.png" alt="Logo" width="50px" height="50px" id="Logo-aside"></a>
+        <div class="enlaces-aside">
+            <a href="">Productos</a>
+            <a href="#Promociones">Promociones</a>
+            <a href="">Nosotros</a>
+            <a href="#Contacto">Contacto</a>
+        </div>
+    </aside>
     <main class="contenedor">
         <div class="contenedor-texto">
             <header class="nombre-tienda"><h1>Abarrotes Patch</h1></header>
@@ -61,13 +74,13 @@
             <form class="form-contacto" id="formulario-contacto">
 
                 <label for="nombre-persona">Nombre <span>*</span></label>
-                <input type="text" name="nombreCompleto" required placeholder="Escriba su nombre...">
+                <input type="text" name="nombreCompleto" required pattern="^[A-Za-zñÑáÁéÉíÍóÓúÚ][A-Za-zñÑáÁéÉíÍóÓúÚ ]*$" placeholder="Escriba su nombre..." title="Solo puede colocar letras y espacios." >
 
                 <label for="correo">Email <span>*</span></label>
-                <input type="email" name="correo" required placeholder="Escriba su correo electrónico...">
+                <input type="email" name="correo" required placeholder="Escriba su correo electrónico..." title="Ingrese un correo electrónico válido.">
 
                 <label for="asunto">Asunto <span>*</span></label>
-                <input type="text" name="asunto" required placeholder="Escriba el asunto del correo...">
+                <input type="text" name="asunto" required placeholder="Escriba el asunto del correo..." pattern="^[A-Za-zñÑáÁéÉíÍóÓúÚ0-9][A-Za-zñÑáÁéÉíÍóÓúÚ0-9 ]*$" title="Solo puede colocar letras, números y espacios.">
 
                 <label for="mensaje">Quejas y sugerencias <span>*</span></label>
                 <textarea name="mensaje" required placeholder="¿En que podemos mejorar?"></textarea>

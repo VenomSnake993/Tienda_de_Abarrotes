@@ -11,6 +11,7 @@ body {
     padding: 0px;
     margin: 0px;
     font-family: "Geist Mono", monospace;
+    /* font-size: clamp(0.8rem, 1vw, 1.2rem); */
     font-optical-sizing: auto;
     background: #ffebd3;
 }
@@ -35,7 +36,6 @@ body {
     margin: 5px;
     font-weight: bold;
     text-decoration: none;
-    transition: color 1s ease-in;
     transition: transform 0.25s ease;
 }
 
@@ -43,8 +43,83 @@ body {
     transform: scale(1.05);
 }
 
-.activar-color-barra-navegacion {
+/* Barra de navegacion para moviles */
+.menu-telefono {
+    display: none;
+    position: sticky;
+    top: 0px;
+    align-items: end;
+    justify-content: space-between;
+    z-index: 1001;
+    transition: background-color 0.5s linear;
+}
+
+.menu-telefono a, .menu-telefono button {
+    margin: 10px;
+}
+
+.btn-menu-lateral {
+    background: none;
+    border: none;
+    transition: transform 0s linear;
+    cursor: pointer;
+}
+
+.menu-telefono > a {
+    transition: transform 0.23s ease;
+}
+
+.menu-telefono > a:hover {
+    transform: scale(1.05);
+
+}
+
+.btn-menu-lateral:active {
+    transform: scale(0.9);
+}
+
+.barra-navegacion-aside {
+    background-color: #ff5c43;
+    display: none;
+    flex-direction: column;
+    width: 200px;
+    height: 100dvh;
+    padding: 10px;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+    transition: background-color 0.5s linear;
+}
+
+.enlaces-aside {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+
+.barra-navegacion-aside a {
+    display: inline-block;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.25s ease;
+}
+
+.barra-navegacion-aside a:hover {
+    transform: scale(1.05);
+}
+
+.activar-color-barra-navegacion{
     background-color: #084386;
+}
+
+.activar-color-menu-telefono{
+    background-color: #ffffff90;
+}
+
+.activar-menu-lateral {
+    display: flex;
 }
 
 .nombre-tienda {
@@ -80,7 +155,7 @@ body {
     max-width: 100%;
 }
 
-.contenedor-imagen > img {
+.contenedor-imagen  img {
     width: min(100%, 500px);
 }
 
@@ -251,8 +326,11 @@ footer a {
     }
 
     .barra-navegacion {
-        font-size: small;
-        justify-content: center;
+        display: none;
+    }
+
+    .menu-telefono {
+        display: flex;
     }
 
     .contenedor-texto {

@@ -1,17 +1,33 @@
 // import emailjs from "/@emailjs/browser";
-
 function ColorBarra() {
     window.addEventListener("scroll", () => {
         const barraNavegacion = document.querySelector(".barra-navegacion");
+        const barraNavegacionAside = document.querySelector(".barra-navegacion-aside");
+        const menuTelefono = document.querySelector(".menu-telefono");
         const posicionScroll = window.scrollY;
         let claseActivada = barraNavegacion.getAttribute("class").search("activar-color-barra-navegacion");
+        let claseActivadaAside = barraNavegacionAside.getAttribute("class").search("activar-color-barra-navegacion");
+        let claseActivadaMenuTelefono = menuTelefono.getAttribute("class").search("activar-color-menu-telefono");
 
-        if (posicionScroll && claseActivada == -1) {
+        if (posicionScroll && claseActivada == -1 && claseActivadaAside == -1 && claseActivadaMenuTelefono == -1) {
             barraNavegacion.classList.add("activar-color-barra-navegacion");
+            barraNavegacionAside.classList.add("activar-color-barra-navegacion");
+            menuTelefono.classList.add("activar-color-menu-telefono");
 
         } else if (!posicionScroll) {
             barraNavegacion.classList.remove("activar-color-barra-navegacion");
+            barraNavegacionAside.classList.remove("activar-color-barra-navegacion");
+            menuTelefono.classList.remove("activar-color-menu-telefono");
         }
+    });
+}
+
+function activarMenuLAteral () {
+    const btnMenuLateral = document.querySelector(".btn-menu-lateral");
+    const barraNavegacionAside = document.querySelector(".barra-navegacion-aside");
+
+    btnMenuLateral.addEventListener("click", () => {
+        barraNavegacionAside.classList.toggle("activar-menu-lateral");
     });
 }
 
@@ -47,3 +63,4 @@ function EnviarCorreo() {
 }
 EnviarCorreo();
 ColorBarra();
+activarMenuLAteral();
