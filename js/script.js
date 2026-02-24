@@ -25,9 +25,16 @@ function ColorBarra() {
 function activarMenuLAteral () {
     const btnMenuLateral = document.querySelector(".btn-menu-lateral");
     const barraNavegacionAside = document.querySelector(".barra-navegacion-aside");
+    const enlacesAside = document.querySelectorAll(".enlaces-aside a");
 
     btnMenuLateral.addEventListener("click", () => {
         barraNavegacionAside.classList.toggle("activar-menu-lateral");
+    });
+
+    enlacesAside.forEach((enlace) => {
+        enlace.addEventListener("click", () => {
+            barraNavegacionAside.classList.toggle("activar-menu-lateral");
+        });
     });
 }
 
