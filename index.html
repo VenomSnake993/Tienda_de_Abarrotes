@@ -9,21 +9,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Manrope:wght@200..800&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Young+Serif&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="resources/images/logo.png" type="image/x-icon">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script defer type = "module" src="js/script.js"></script>
 </head>
 
 <body>
+    <!-- Menu de navegación -->
     <nav class="barra-navegacion">
         <a href="index.html"><img src="resources/images/logoB.png" alt="Logo" width="50px" height="50px" id="Logo"></a>
         <div>
             <a href="#Productos">Productos</a>
             <a href="#Promociones">Promociones</a>
-            <a href="">Nosotros</a>
+            <a href="#Nosotros">Nosotros</a>
             <a href="#Contacto">Contacto</a>
         </div>
     </nav>
+    <!-- Menu de navegación para dispositivos móviles -->
     <div class="menu-telefono">
         <a href="index.html"><img src="resources/images/logo.png" alt="Logo" width="50px" height="50px" id="Logo-aside"></a>
 
@@ -32,12 +35,14 @@
     <aside class="barra-navegacion-aside">
         <a href="index.html" id="Logo-aside"><img src="resources/images/logoB.png" alt="Logo" width="50px" height="50px"></a>
         <div class="enlaces-aside">
-            <a href="">Productos</a>
+            <a href="#Productos">Productos</a>
             <a href="#Promociones">Promociones</a>
-            <a href="">Nosotros</a>
+            <a href="#Nosotros">Nosotros</a>
             <a href="#Contacto">Contacto</a>
         </div>
     </aside>
+
+    <!-- Sección principal con información de la tienda y una imagen representativa -->
     <main class="contenedor">
         <div class="contenedor-texto">
             <header class="nombre-tienda"><h1>Abarrotes Patch</h1></header>
@@ -50,6 +55,7 @@
         </div>
     </main>
 
+    <!-- Sección de productos vendidos por la tienda -->
         <section class="seccion-productos" id="Productos">
         <header class="titulo-seccion"><h2>Productos que ofrecemos</h2></header>
         <div class="grupo-productos">
@@ -64,6 +70,23 @@
         </div>
     </section>
 
+    <!-- Sección Nosotros con información de la tienda y una imagen representativa -->
+    <section class="seccion-nosotros" id="Nosotros">
+        <header class="titulo-seccion"><h2>¿Quiénes somos?</h2></header>
+        <div class="nosotros">
+            <div class="contenedor-imagen">
+                <img src="resources/images/Nosotros.png" alt="Tienda">
+            </div>
+            <div class="contenedor-texto">
+                <p>Abarrotes Patch es una tienda familiar 👨‍👩‍👧‍👦 dedicada a ofrecer productos de calidad a precios accesibles 🏷️. Nuestra misión es satisfacer las necesidades de nuestros clientes con productos frescos, variados y siempre disponibles 🍎🥦✨.</p>
+
+                <p>Contamos con envío a domicilio 🛵 mediante <strong>compra mínima de $150.00 pesos 📦🏠.</strong></p>
+
+                <p><strong>Horario de atención ⏰:</strong> Lunes a Sábadado de 8:00 a 21:00 horas 📅 y Domingo de 9:00 a 21:00 horas."</p>
+            </div>
+        </div>
+    </section>
+    <!-- Sección de promociones que ofrece la tienda en algunos productos -->
     <section class="seccion-promociones" id="Promociones">
         <header class="titulo-seccion"><h2>Promociones en productos</h2></header>
         <div class="grupo-promociones">
@@ -82,6 +105,7 @@
         </div>
     </section>
 
+    <!-- Sección de contacto para enviar emails y ver la ubicación de la tienda en google maps -->
     <article class="seccion-contacto-direccion" id="Contacto">
         <header class="titulo-seccion"><h2>Dirección y Contacto</h2></header>
         <div class="contacto-direccion">

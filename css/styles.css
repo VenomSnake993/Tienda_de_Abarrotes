@@ -11,9 +11,11 @@ body {
     padding: 0px;
     margin: 0px;
     font-family: "Geist Mono", monospace;
+    font-weight: 400;
     /* font-size: clamp(0.8rem, 1vw, 1.2rem); */
     font-optical-sizing: auto;
     background: #ffebd3;
+    line-height: 1.5;
 }
 
 ::selection {
@@ -21,10 +23,17 @@ body {
     color: white;
 }
 
+h1, h2{
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    
+}
+
 a, img {
     user-select: none;
 }
 
+/* Barra de navegacion principal*/
 .barra-navegacion {
     background-color: #ff5c43;
     display: flex;
@@ -120,7 +129,13 @@ a, img {
     transition: transform 0.25s ease, border-bottom-color 0.5s ease;
 }
 
+.titulo-seccion {
+    font-size: 1.3em;
+    color: white;
+    text-align: center;
+}
 
+/* Clases para aplicar colores a los menus de navegacion */
 .barra-navegacion-aside a:hover {
     border-bottom-color: white;
 }
@@ -138,6 +153,7 @@ a, img {
     pointer-events: auto;
 }
 
+/* Seccion Principal */
 .nombre-tienda {
     text-align: center;
     font-size: 1.5rem;
@@ -145,12 +161,11 @@ a, img {
 
 .contenedor {
     /* background-image: linear-gradient(to bottom right, orange, white); */
-    max-width: 100%;
-    margin-top: 10px;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
-    gap: 10px;
+    padding: 10px;
 }
 
 .contenedor-texto {
@@ -159,8 +174,8 @@ a, img {
     font-size: 1.3rem;
 }
 
-.contenedor-texto:first-child p {
-    margin-top: 0px;
+.contenedor-texto p {
+    margin: 0;
     padding: 10px;
 }
 
@@ -200,9 +215,32 @@ a, img {
     transition: flex 0.5s;
 }
 
-.grupo-productos > img:hover {
-    flex: 10;
+.grupo-productos img:hover {
+    flex: 5;
     object-fit: initial;
+}
+
+/* Sección Nosotros */
+.seccion-nosotros {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.nosotros {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+}
+
+.seccion-nosotros .titulo-seccion{
+    color: black;
+}
+
+.nosotros div {
+    max-width: 50%;
 }
 
 /* Seccion Promociones */
@@ -249,15 +287,14 @@ a, img {
 .promociones img:hover {
     transform: scale(1);
 }
-/* Seccion Contacto */
 
+/* Seccion Contacto */
 .seccion-contacto-direccion {
     max-width: 100%;
     display: flex;
     flex-direction: column;
     padding: 10px;
-    margin-top: 20px;
-    background-color: #084386;
+    background-color: #ffebd3;
 }
 
 .contacto-direccion {
@@ -266,18 +303,15 @@ a, img {
     gap: 10px;
 }
 
-.titulo-seccion {
-    font-size: 1.3em;
-    color: white;
-    text-align: center;
-}
-
 .form-contacto {
     width: 50%;
     display: flex;
     flex-direction: column;
 }
 
+.seccion-contacto-direccion .titulo-seccion {
+    color: black;
+}
 
 iframe {
     width: 50%;
@@ -288,9 +322,12 @@ span {
 }
 
 label, button[type="submit"], .form-contacto p  {
-    color: white;
     font-weight: bold;
     font-style: italic;
+}
+
+button[type="submit"] {
+    color: white;
 }
 
 input[type="text"], input[type="email"], textarea {
@@ -339,17 +376,20 @@ textarea {
     /* field-sizing: content; */
 }
 
+/* Pie de página */
 address {
     display: inline;
 }
 
 footer {
+    background-color: #084386;
     padding: 1rem;
     text-align: center;
+    color: white;
 }
 
 footer a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -407,6 +447,19 @@ footer a {
 
     .grupo-productos img {
         height: 200px;
+        border-radius: 12px;
+    }
+
+    .grupo-productos img:hover {
+        flex: 10;
+    }
+
+    .nosotros {
+        flex-direction: column;
+    }
+
+    .nosotros div {
+        max-width:100%;
     }
 
 }
